@@ -1,15 +1,19 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.LeXiaoWen'
+
 android {
-    compileSdkVersion 27
+    compileSdkVersion rootProject.compileSdkVersion
 
 
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -27,8 +31,72 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // Android support
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+
+    //fresco
+    implementation "com.facebook.fresco:fresco:$rootProject.frescoVersion"
+    implementation "com.facebook.fresco:animated-gif:$rootProject.frescoVersion"
+
+    //Bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //Logger
+    implementation "com.orhanobut:logger:$rootProject.loggerVersion"
+
+    //Butterknife
+    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttploggingVersion"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+
+    //gson
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    //解决Dex超出方法数限制的问题
+    //dex multi
+    implementation "com.android.support:multidex:$rootProject.multidexVersion"
+
+    //eventBus
+    implementation "org.greenrobot:eventbus:$rootProject.eventbusVersion"
+
+    //circle imageview
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleImageviewVersion"
+
+    //permissions
+    implementation "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxPerssionsVersion"
+
+    //dagger2
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
+//    classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+//    apply plugin: 'com.neenbedankt.android-apt'
+    //     在具体的App中以apt插件的方式再导入
+//    apt 'com.google.dagger:dagger-implementation
+// r:2.10-rc4'
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+    //recyclerView
+    implementation "com.jcodecraeer:xrecyclerview:$rootProject.xrecyclerviewVersion"
+
+    //广告轮播图
+    implementation "com.squareup.picasso:picasso:$rootProject.picassoVersion"
+    implementation "com.nineoldandroids:library:$rootProject.nineoldVersion"
+    implementation "com.daimajia.slider:library:$rootProject.sliderVersion"
+
+    //fragmentation
+    implementation "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
+
+    implementation "com.qmuiteam:qmui:$rootProject.qmuiVersion"
 }
