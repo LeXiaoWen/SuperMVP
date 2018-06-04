@@ -99,4 +99,6 @@ dependencies {
     implementation "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
 
     implementation "com.qmuiteam:qmui:$rootProject.qmuiVersion"
+
+    implementation "org.bouncycastle:bcpkix-jdk15on:$rootProject.jdk15on"
 }

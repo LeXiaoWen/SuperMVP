@@ -38,7 +38,7 @@ ext {
     // App dependencies
     supportLibraryVersion = '25.3.1'
     frescoVersion = "1.5.0"
-    loggerVersion = '2.1.1'
+    loggerVersion = '2.2.0'
     retrofitVersion = "2.4.0"
     okhttploggingVersion = "3.4.1"
     okhttpVersion = "3.10.0"
@@ -63,4 +63,6 @@ ext {
 
     versionCode = 1
     versionName = "1.0.0"
+
+    jdk15on = "1.57"
 }

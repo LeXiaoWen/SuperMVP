@@ -89,14 +89,7 @@ public class IDEACode {
      * @return byte[] 解密后的数据
      * */
     private static byte[] decrypt(byte[] data,byte[] key) throws Exception{
-        //加入bouncyCastle支持
-//        BouncyCastleProvider bouncyCastleProvider = new BouncyCastleProvider();
-//        if(null != Security.getProvider(bouncyCastleProvider.getName()))
-//        {
-//            Security.removeProvider(bouncyCastleProvider.getName());
-//        }
-//
-//        Security.addProvider(new BouncyCastleProvider());
+
         // 加入BouncyCastleProvider支持
         BouncyCastleProvider bouncyCastleProvider = new BouncyCastleProvider();
         if(null != Security.getProvider(bouncyCastleProvider.getName()))
@@ -113,25 +106,6 @@ public class IDEACode {
         //执行操作
         return cipher.doFinal(data);
     }
-//    public static String getKey(){
-//        String result = null;
-//        try {
-//            result = Base64.encodeBase64String(initkey());
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return result;
-//    }
-//    public static String ideaEncrypt(String data, String key) {
-//        String result = null;
-//        try {
-//            byte[] data_en = encrypt(data.getBytes(), Base64.decodeBase64(key));
-//            result = Base64.encodeBase64String(data_en);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return result;
-//    }
 
     /**
      * 解密
