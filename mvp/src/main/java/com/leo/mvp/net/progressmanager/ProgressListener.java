@@ -1,7 +1,7 @@
-package cree.mvp.net.progressmanager;
+package com.leo.mvp.net.progressmanager;
 
 
-import cree.mvp.net.progressmanager.body.ProgressInfo;
+import com.leo.mvp.net.progressmanager.body.ProgressInfo;
 
 /**
  * Created by jess on 02/06/2017 18:23

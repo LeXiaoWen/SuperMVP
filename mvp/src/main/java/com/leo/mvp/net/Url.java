@@ -6,4 +6,6 @@ package com.leo.mvp.net;
 
 
 public class Url {
+    public static String ip = "http://192.168.0.231:9001/";
+    public static final String baseUrl = ip + "api/";
 }

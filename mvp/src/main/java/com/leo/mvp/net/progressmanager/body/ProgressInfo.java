@@ -1,4 +1,4 @@
-package cree.mvp.net.progressmanager.body;
+package com.leo.mvp.net.progressmanager.body;
 
 import android.os.Parcel;
 import android.os.Parcelable;

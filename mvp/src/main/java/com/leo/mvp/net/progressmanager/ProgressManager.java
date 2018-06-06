@@ -1,7 +1,10 @@
-package cree.mvp.net.progressmanager;
+package com.leo.mvp.net.progressmanager;
 
 import android.os.Handler;
 import android.os.Looper;
+
+import com.leo.mvp.net.progressmanager.body.ProgressRequestBody;
+import com.leo.mvp.net.progressmanager.body.ProgressResponseBody;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -9,9 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-import cree.mvp.net.progressmanager.body.ProgressInfo;
-import cree.mvp.net.progressmanager.body.ProgressRequestBody;
-import cree.mvp.net.progressmanager.body.ProgressResponseBody;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
